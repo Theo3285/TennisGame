@@ -11,8 +11,8 @@ The Tennis Society has agreed that Sets and Matches are out of scope, so you onl
 
  
 scenario : display score
-Given a player1
-And a player2
+Given a player named "player1"
+And a player named "player2"
 when umpire press player1 button
 Then player1 scores
-And score for player1 and player2 is displayed
+And scores for both players is displayed
