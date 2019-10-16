@@ -4,7 +4,8 @@ public enum Score {
     LOVE(1, "Love"),
     FIFTEEN(2, "Fifteen"),
     THIRTY(3, "Thirty"),
-    FORTY(4, "Forty");
+    FORTY(4, "Forty"),
+    ADVANTAGE(5, "Advantage");
 
     private int point;
     private String score;
@@ -22,13 +23,18 @@ public enum Score {
         return score;
     }
 
-    public static String forWinning(int point) {
-        String score = new String();
+    public static String forWinning(int point, String name) {
+        StringBuilder score = new StringBuilder();
         Score[] values = Score.values();
         for (Score s : values) {
             if (s.point() == point)
-                score = s.score();
+                score.append(s.score());
         }
-        return score;
+        score.append(name(point, name));
+        return score.toString();
+    }
+
+    private static String name(int point, String name) {
+        return point == 5 ? " " + name : "";
     }
 }

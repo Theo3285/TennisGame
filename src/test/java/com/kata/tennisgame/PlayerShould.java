@@ -9,7 +9,7 @@ public class PlayerShould {
 
     @Test
     public void return_all_possible_player_score_for_a_set() {
-        Player player = new Player();
+        Player player = new Player("player1");
 
         assertThat(player.getScore(), is("Love"));
 
@@ -21,5 +21,8 @@ public class PlayerShould {
 
         player.wonPoint();
         assertThat(player.getScore(), is("Forty"));
+
+        player.wonPoint();
+        assertThat(player.getScore(), is("Advantage player1"));
     }
 }

@@ -3,13 +3,18 @@ package com.kata.tennisgame;
 public class Player {
 
     int point = 1;
+    private String name;
 
-    public void wonPoint() {
+    public Player(String name) {
+        this.name = name;
+    }
+
+    void wonPoint() {
         point++;
     }
 
-    public String getScore() {
-        return Score.forWinning(point);
+    String getScore() {
+        return Score.forWinning(point, name);
     }
 
 }

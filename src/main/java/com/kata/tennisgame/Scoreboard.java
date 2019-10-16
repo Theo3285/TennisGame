@@ -20,7 +20,7 @@ public class Scoreboard {
                 player.wonPoint();
     }
 
-    public void displayScore() {
+    public void getScore() {
         scoreDisplayer.display(players);
     }
 }

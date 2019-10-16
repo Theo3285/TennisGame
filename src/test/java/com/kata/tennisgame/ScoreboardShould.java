@@ -9,7 +9,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -38,11 +37,12 @@ public class ScoreboardShould {
         verify(player_one).wonPoint();
     }
 
+
     @Test
     public void display_players_score() {
         List<Player> players = Arrays.asList(player_one, player_two);
 
-        scoreboard.displayScore();
+        scoreboard.getScore();
 
         verify(scoreDisplayer).display(players);
     }
