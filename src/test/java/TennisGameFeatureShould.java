@@ -42,8 +42,7 @@ public class TennisGameFeatureShould {
 
     @Test
     public void display_deuce_when_each_players_scored_three_points_and_scores_are_equals() {
-
-        play();
+        wins(3);
 
         scoreboard.getScore();
 
@@ -51,8 +50,8 @@ public class TennisGameFeatureShould {
         verify(console).displayLine("Deuce | Deuce");
     }
 
-    private void play() {
-        for (int i = 0; i < 3; i++) {
+    private void wins(int games) {
+        for (int i = 0; i < games; i++) {
             scoreboard.wonPoint(player_one);
             scoreboard.wonPoint(player_two);
         }

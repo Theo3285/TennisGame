@@ -5,7 +5,8 @@ public enum Score {
     FIFTEEN(2, "Fifteen"),
     THIRTY(3, "Thirty"),
     FORTY(4, "Forty"),
-    ADVANTAGE(5, "Advantage");
+    ADVANTAGE(5, "Advantage"),
+    WIN(6, "Win");
 
     private int point;
     private String score;
@@ -31,7 +32,12 @@ public enum Score {
                 score.append(s.score());
         }
         score.append(name(point, name));
+        score.append(win(point, name));
         return score.toString();
+    }
+
+    private static String win(int point, String name) {
+        return point == 6 ? " for " + name : "";
     }
 
     private static String name(int point, String name) {
