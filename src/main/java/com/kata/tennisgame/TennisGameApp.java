@@ -21,5 +21,8 @@ public class TennisGameApp {
 
         scoreboard.wonPoint(player_one);
         scoreboard.getScore();
+
+        scoreboard.wonPoint(player_one);
+        scoreboard.getScore();
     }
 }

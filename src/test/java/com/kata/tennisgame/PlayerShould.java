@@ -6,6 +6,10 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
+//TODO : Advantage only when forty for both player
+//TODO : Back to Forty when player1 advantage and player2 win point
+//TODO : Reset game and point to love for both players
+
 public class PlayerShould {
 
     private Player player;
